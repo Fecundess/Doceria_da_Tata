@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Doceria Da TaTa</h1>
+        <nav>
+            <button class="filter" data-category="tudo">Tudo</button>
+            <button class="filter" data-category="bolos">Bolos</button>
+            <button class="filter" data-category="copodafelicidade">Copo da Felicidade</button>
+            <button class="filter" data-category="tortinhas">Tortinhas</button>
+            <button class="filter" data-category="pudim">Pudim</button>
+            <button class="filter" data-category="brownie">Brownie</button>
+            <button class="filter" data-category="bebidas">Bebidas</button>
+        </nav>
+        <!-- Botão do Carrinho -->
+        <button id="cart-button" class="cart-button">Carrinho</button>
+    </header>
+
+    <main id="menu">
+        <!-- Bolos -->
+        <div class="item" data-category="bolos">
+            <img src="Imagens dos produtos/BoloSaborPrestigio.jpeg" alt="Bolo Sabor Prestígio">
+            <h2>Prestígio</h2>
+            <p>Bolo de pote sabor Prestígio.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="bolos">
+            <img src="Imagens dos produtos/BoloSaborAbacaxiCoco.jpeg" alt="Bolo Sabor Abacaxi com Coco">
+            <h2>Abacaxi com Coco</h2>
+            <p>Bolo de pote sabor Abacaxi com Coco.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="bolos">
+            <img src="Imagens dos produtos/BoloSaborAbacaxiDoceLeite.jpeg" alt="Bolo Sabor Abacaxi com Doce de Leite">
+            <h2>Abacaxi com Doce de Leite</h2>
+            <p>Bolo de pote sabor Abacaxi com Doce de Leite.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="bolos">
+            <img src="Imagens dos produtos/BoloSaborAlpino.jpeg" alt="Bolo Sabor Alpino">
+            <h2>Alpino</h2>
+            <p>Bolo de pote sabor Alpino.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="bolos">
+            <img src="Imagens dos produtos/BoloSaborBanoffe.jpeg" alt="Bolo Sabor Banoffe">
+            <h2>Banoffe</h2>
+            <p>Bolo de pote sabor Banoffe.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="bolos">
+            <img src="Imagens dos produtos/BoloSaborCenouraBrigadeiro.jpeg" alt="Bolo Sabor Cenoura e Brigadeiro">
+            <h2>Cenoura e Brigadeiro</h2>
+            <p>Bolo de pote sabor Cenoura e Brigadeiro.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="bolos">
+            <img src="Imagens dos produtos/BoloSaborNinho..jpeg" alt="Bolo Sabor Ninho com Morango">
+            <h2>Ninho com Morango</h2>
+            <p>Bolo de pote sabor Ninho com Morango.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="bolos">
+            <img src="Imagens dos produtos/BoloSaborNinhoNutella.jpeg" alt="Bolo Sabor Ninho com Nutella">
+            <h2>Ninho com Nutella</h2>
+            <p>Bolo de pote sabor Ninho com Nutella.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="bolos">
+            <img src="Imagens dos produtos/BoloSaborSensacao.jpeg" alt="Bolo Sabor Sensação">
+            <h2>Sensação</h2>
+            <p>Bolo de pote sabor Sensação.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <!-- Copo da Felicidade -->
+        <div class="item" data-category="copodafelicidade">
+            <img src="Imagens dos produtos/CopodaFelicidadeMorango.jpg" alt="Copo da Felicidade Sabor Morango">
+            <h2>Morango</h2>
+            <p>Copo da Felicidade Sabor Morango.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="copodafelicidade">
+            <img src="Imagens dos produtos/CopodaFelicidadeUva.jpg" alt="Copo da Felicidade Sabor Uva">
+            <h2>Uva</h2>
+            <p>Copo da Felicidade Sabor Uva.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <!-- Tortinhas -->
+        <div class="item" data-category="tortinhas">
+            <img src="Imagens dos produtos/TortinhadeLimao.jpg" alt="Tortinha de Limão">
+            <h2>Tortinha de Limão</h2>
+            <p>Deliciosa Tortinha de Limão.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="tortinhas">
+            <img src="Imagens dos produtos/TortinhadeMaracuja.jpg" alt="Tortinha de Maracujá">
+            <h2>Tortinha de Maracujá</h2>
+            <p>Deliciosa Tortinha de Maracujá.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <!-- Pudim -->
+        <div class="item" data-category="pudim">
+            <img src="Imagens dos produtos/Pudim.jpg" alt="Pudim de Leite Ninho">
+            <h2>Pudim</h2>
+            <p>Delicioso Pudim de Leite Ninho.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <!-- Brownie -->
+        <div class="item" data-category="brownie">
+            <img src="Imagens dos produtos/BrownieNutella.jpg" alt="Brownie de Nutella">
+            <h2>Brownie de Nutella</h2>
+            <p>Delicioso Brownie de Nutella.</p>
+            <span>R$ 14,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <!-- Bebidas -->
+        <div class="item" data-category="bebidas">
+            <img src="Imagens dos produtos/suco_de_laranja.png" alt="Suco Natural de Laranja">
+            <h2>Suco Natural</h2>
+            <p>Suco refrescante de laranja.</p>
+            <span>R$ 7,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="bebidas">
+            <img src="Imagens dos produtos/Agua.jpg" alt="Água Mineral">
+            <h2>Água Mineral</h2>
+            <p>Água refrescante Mineral Sem Gás.</p>
+            <span>R$ 2,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+
+        <div class="item" data-category="bebidas">
+            <img src="Imagens dos produtos/Refrigerante" alt="Refrigerante em Lata">
+            <h2>Refrigerante em Lata</h2>
+            <p>Refrigerante refrescante em Lata.</p>
+            <span>R$ 6,00</span>
+            <button class="add-to-cart">Adicionar</button>
+        </div>
+    </main>
+
+    <!-- Carrinho de Compras -->
+    <div id="cart" class="cart-container">
+        <h3>Carrinho de Compras</h3>
+        <ul id="cart-items"></ul>
+        <p id="total">Total: R$ 0.00</p>
+        <button id="close-cart-button" class="close-cart">Fechar Carrinho</button>
+
+        <!-- Formulário de Endereço e Forma de Pagamento -->
+        <div id="order-info">
+            <label for="address">Endereço de entrega:</label>
+            <input type="text" id="address" placeholder="Digite o endereço de entrega">
+
+            <label for="payment-method">Forma de pagamento:</label>
+            <select id="payment-method">
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="pix">Pix</option>
+            </select>
+        </div>
+
+        <button id="whatsapp-button" class="whatsapp-button">
+            <img src="Imagens dos produtos/whatsapp.jpg" alt="WhatsApp" class="whatsapp-icon">Enviar Pedido
+        </button>
+    </div>
+    <!-- Notificações -->
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

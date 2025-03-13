@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F2F6D9;
+    color: #333;
+    min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da janela de visualização */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+header {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #c34a89d1;
+    color: white;
+    text-align: center;
+    padding: 2%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    animation: glow 1s infinite alternate;
+}
+
+nav {
+    margin-top: 2%;
+}
+
+button.filter {
+    margin: 1%;
+    padding: 1% 2%;
+    background-color: white;
+    border: 1px solid #ee07eaca;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button.filter:hover {
+    background-color: #630374;
+    color: white;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px;
+    gap: 8px;
+}
+
+.item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    width: 180px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex; /* Adicionado para usar flexbox */
+    flex-direction: column; /* Adicionado para dispor os elementos em coluna */
+    justify-content: space-between; /* Adicionado para distribuir os elementos uniformemente */
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    border-radius: 5px;
+    height: 150px;
+    object-fit: cover; /* Recorta para preencher sem distorcer */
+}
+
+.item h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.item p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px; /* Adiciona margem inferior */
+}
+
+.item span {
+    font-size: 1.1em;
+    color: #a9365d;
+    margin: 0%;
+}
+
+button.add-to-cart {
+    background-color: #a9365d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center; /* Centraliza o botão horizontalmente */
+}
+
+button.add-to-cart:hover {
+    background-color: #630374;
+}
+
+.cart-button {
+    background-color: #c34a89; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão*/
+    border: none; /* Remove qualquer borda padrão do botão */
+    padding: 15px 20px; /* Adiciona um preenchimento interno de 15px na vertical e 20px na horizontal */
+    font-size: 16px; /* Define o tamanho da fonte do texto do botão*/
+    cursor: pointer; /* Altera o cursor do mouse indicando que é clicável */
+    position: fixed; /* Define a posição do botão como fixa*/
+    bottom: 500px; /* Posiciona o botão no fundo da janela de visualização */
+    right: 30px; /* Posiciona o botão da direita na janela de visualização */
+    border-radius: 8px; /* Adiciona cantos arredondados ao botão */
+    z-index: 100; /* Define a sobreposição do botão, garantindo que ele fique acima de outros elementos com valores de z-index menores ou sem*/
+}
+
+.cart-button:hover {
+    background-color: #630374;
+}
+
+.cart-container {
+    position: fixed;
+    top: 20%;
+    right: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 280px;
+    max-width: 90%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+#cart-items {
+    color: #c34a89;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-items button {
+    background-color: #F44336;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+#cart-items button:hover {
+    background-color: #E53935;
+}
+
+#total {
+    color: #140374;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+h3 {
+    color: black;
+}
+
+#whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-icon {
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+@keyframes blink-border {
+    0% { border-color: #630374; }
+    50% { border-color: transparent; }
+    100% { border-color: #630374; }
+}
+
+#order-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFFBF0;
+    border: 2px solid #630374;
+    border-radius: 10px;
+    animation: blink-border 3s infinite;
+}
+
+#order-info label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: black;
+}
+
+#order-info input,
+#order-info select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #630374;
+    font-size: 1em;
+}
+
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.notification {
+    background-color: #ea15db;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    #menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: first baseline;
+        padding: 5px;
+        gap: 8px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .item {
+        width: 48%;
+        margin-bottom: 10px;
+    }
+
+    button.add-to-cart {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .cart-button {
+        background-color: #c34a89; /* Define a cor de fundo do botão */
+        color: white; /* Define a cor do texto do botão*/
+        border: none; /* Remove qualquer borda padrão do botão */
+        padding: 10px 10px; /* Adiciona um preenchimento interno de 15px na vertical e 20px na horizontal */
+        font-size: 16px; /* Define o tamanho da fonte do texto do botão*/
+        cursor: pointer; /* Altera o cursor do mouse indicando que é clicável */
+        position: fixed; /* Define a posição do botão como fixa*/
+        bottom: 95%; /* Posiciona o botão no fundo da janela de visualização */
+        right: 1%; /* Posiciona o botão da direita na janela de visualização */
+        border-radius: 8px; /* Adiciona cantos arredondados ao botão */
+        z-index: 100; /* Define a sobreposição do botão, garantindo que ele fique acima de outros elementos com valores de z-index menores ou sem*/
+    }
+
+    #cart-items li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #whatsapp-button {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .cart-container {
+        width: 100%;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .notification {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+    .main menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff99cc, 0 0 10px #ff66b2, 0 0 15px #ff3385;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff3385, 0 0 30px #cc0052;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff99cc, 0 0 10px #ff66b2, 0 0 15px #ff3385;
+    }
+}
